@@ -115,7 +115,7 @@ function Team() {
             <div className="relative flex-col flex w-full">
               <div className="border-stone-30 border-2 relative">
                 <div style={{ minHeight: "500px" }}>
-                  <img src={card.imgSrc} alt="NFT" />
+                  <img src={card.imgSrc} alt="NFT" className="w-full" />
                 </div>
                 <div className="flex pb-4 absolute bottom-0 pl-2 backdrop-blur-xl w-full">
                   <div className="flex flex-col">
