@@ -4,7 +4,7 @@ function Utility() {
   const utilityCards = [
     {
       number: "#01",
-      imgSrc: "images/utility/NFT1.png",
+      imgSrc: "images/utility/NFT1.png", //https://choosen-ones-dev.netlify.app/
       title: "WORLD CLASS ART WITH FULL OWNERSHIP",
       detailTable: [
         { key: "ARTWORK", value: "FULL OWNERSHIP" },
@@ -70,7 +70,10 @@ function Utility() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="w-5/6 md:flex md:flex-col mx-auto md:mt-10" style={{paddingBottom: '100px'}}>
+      <div
+        className="w-5/6 md:flex md:flex-col mx-auto md:mt-10"
+        style={{ paddingBottom: "100px" }}
+      >
         <div className="flex flex-col">
           <h1 className="text-5xl md:text-7xl">UTILITY</h1>
           <p className="md:text-2xl pt-6 pb-6">
@@ -78,12 +81,14 @@ function Utility() {
             benefit our community in a multifaceted way.
           </p>
         </div>
-        <div className="flex flex-wrap" style={{margin: '-100px -30px'}}>
+        <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:gap-36 mt-8">
           {utilityCards.map((card) => (
-            <div className="relative flex-col flex w-[400px] flex"style={{width: '33.33%', flexBasis: '33.33%', padding: '100px 30px', minHeight:'100px', alignItems: 'center'}}>
-              <div className="border-stone-30 border-2 relative flex w-full">
-                <img src={card.imgSrc} alt="" width={500} className="w-full" />
-                <div className="flex pb-4 absolute bottom-0 pl-2 backdrop-blur-xl">
+            <div className="relative flex-col flex w-full">
+              <div className="border-stone-30 border-2 relative">
+                <div style={{ minHeight: "500px" }}>
+                  <img src={card.imgSrc} alt="NFT" />
+                </div>
+                <div className="flex pb-4 absolute bottom-0 pl-2 backdrop-blur-xl w-full">
                   <div className="flex flex-col">
                     <h1 className="w-5/6 py-2 font-semibold">{card.title}</h1>
                     <table className="text-xs">
@@ -97,7 +102,6 @@ function Utility() {
                       ))}
                     </table>
                   </div>
-
                   <h1 className="text-3xl md:text-7xl font-bold ml-auto mr-1">
                     {card.number}
                   </h1>
