@@ -10,40 +10,66 @@ function About() {
     >
       <div className="bg-black">
         <div className="flex justify-center">
-          <Circle width={520} height={520}></Circle>
-          <img
-            className="-ml-4 z-10"
-            width={
-              visualViewport.width > 700
-                ? visualViewport.width / 4
-                : visualViewport.width / 3
-            }
-            src="images/about/Lady-1 1.png"
-            alt=""
-          />
-          <img
-            className="-ml-4 z-10"
-            width={
-              visualViewport.width > 700
-                ? visualViewport.width / 4
-                : visualViewport.width / 3
-            }
-            src="images/about/image 1.png"
-            alt=""
-          />
-          <img
-            className="-ml-4 z-10"
-            width={
-              visualViewport.width > 700
-                ? visualViewport.width / 4
-                : visualViewport.width / 3
-            }
-            src="images/about/dudde 1.png"
-            alt=""
-          />
+          <Circle width={visualViewport.width * 0.4 - 50}></Circle>
+        </div>
+
+        <div className="flex justify-center pt-40">
+          <div style={{ position: "relative", display: "flex", width: "100%" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-end",
+                zIndex: "1",
+                width: "35%",
+                transform: "translateX(-5%)",
+              }}
+            >
+              <img
+                className="-ml-4 z-10"
+                src="images/about/Lady-1 1.png"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-end",
+                zIndex: "2",
+                width: "25%",
+                transform: "translateX(5%)",
+              }}
+            >
+              <img
+                className="-ml-4 z-10"
+                src="images/about/image 1.png"
+                alt=""
+                style={{
+                  width: "95%",
+                  transform: "scale(2) translateY(-25%) translateX(6%)",
+                }}
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-end",
+                zIndex: "1",
+                width: "40%",
+                transform: "translateX(0%)",
+              }}
+            >
+              <img
+                className="-ml-4 z-10"
+                src="images/about/dudde 1.png"
+                alt=""
+                style={{ width: "100%" }}
+              />
+            </div>
+          </div>
         </div>
         <div className="mt-8 z-20">
-          <article className="md:w-2/3 w-5/6 mx-auto">
+          <article className="w-full px-20">
             <div className="pb-16">
               <h1 className="md:text-4xl text-3xl pb-8">WHO ARE WE?</h1>
               <p className="pb-6">

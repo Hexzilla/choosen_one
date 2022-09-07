@@ -25,7 +25,7 @@ function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="justify-around absolute bottom-0 w-full flex ">
+      <div className="justify-around absolute bottom-0 w-full flex">
         <div className="relative">
           <Circle
             width={Math.min(visualViewport.height, visualViewport.width) - 120}

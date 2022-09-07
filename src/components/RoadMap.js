@@ -1,3 +1,4 @@
+import "./RoadMap.css";
 import { motion } from "framer-motion";
 
 function RoadMap() {
@@ -114,36 +115,35 @@ function RoadMap() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className=" md:flex md:flex-col mx-auto md:mt-10">
-        <div className="flex flex-col w-5/6 mx-auto">
-          <h1 className="text-5xl md:text-7xl">ROADMAP</h1>
+      <div className="main_container">
+        <div>
+          <h1 className="main_nav">ROADMAP</h1>
         </div>
-        <div className="flex flex-wrap mt-10">
+        <div className="sub_container">
           {roadMapCards.map((card, index) => (
-            <div
-              className={`flex flex-col md:flex-row w-5/6 md:w-2/3 mb-10 mx-auto ${
-                index % 2 === 1 ? "bg-[#006F57]" : "bg-[#8D99AE]"
-              }`}
-            >
-              <div className="md:w-1/2  m-3 md:ml-16">
-                <h1 className="md:text-7xl text-5xl md:pb-16 font-bold">
-                  {card.cardNumber}
-                </h1>
-                <article>
-                  <h2 className="font-thin">{card.phaseString}</h2>
-                  <h2>{card.title}</h2>
-                  <h3 className="italic font-thin">{card.subtitle}</h3>
-                  {card.paras.map((para) => (
-                    <p className="pt-4">{para}</p>
-                  ))}
-                </article>
+            <div className={`sub_items`}>
+              <div className={`sub_item `}>
+                <div className="sub_half">
+                  <h1 className="number">
+                    {card.cardNumber}
+                  </h1>
+                  <article className="sub_article">
+                    <h2 className="font-thin">{card.phaseString}</h2>
+                    <h2 className="font_bold">{card.title}</h2>
+                    <h3 className="italic font-thin">{card.subtitle}</h3>
+                    {card.paras.map((para) => (
+                      <p className="pt-4">{para}</p>
+                    ))}
+                  </article>
+                </div>
+                <div className="sub_half">
+                  <img
+                    src={card.imgsrc}
+                    alt=""
+                    className="sub_half_image"
+                  />
+                </div>
               </div>
-              <img
-                src={card.imgsrc}
-                alt=""
-                width={368}
-                className="pr-4 md:p-0 max-h-[450px] my-auto mx-auto"
-              />
             </div>
           ))}
         </div>
