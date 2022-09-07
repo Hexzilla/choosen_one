@@ -19,7 +19,7 @@ const quotes = [
 ];
 
 const Home = () => {
-  const [src, { blur }] = useProgressiveImg(
+  const [src, blur] = useProgressiveImg(
     "images/home/tiny.jpg",
     "images/home/choosen-ones-home.png"
   );

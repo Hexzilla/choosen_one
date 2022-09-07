@@ -97,7 +97,7 @@ const utilityCards = [
 ];
 
 const TeamCard = ({ card }) => {
-  const [src, { blur }] = useProgressiveImg(
+  const [src, blur] = useProgressiveImg(
     "images/team/tiny.jpg",
     card.imgSrc
   );

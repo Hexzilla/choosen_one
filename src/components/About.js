@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
 import Circle from "./Circle";
+import useProgressiveImg from "../hooks/useProgressiveImg";
 
 function About() {
+  const [src1, blur1] = useProgressiveImg(
+    "images/about/tiny.jpg",
+    "images/about/lady-1.png"
+  );
+  const [src2, blur2] = useProgressiveImg(
+    "images/about/tiny.jpg",
+    "images/about/man-1.png"
+  );
+  const [src3, blur3] = useProgressiveImg(
+    "images/about/tiny.jpg",
+    "images/about/dudde-1.png"
+  );
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -9,65 +23,81 @@ function About() {
       exit={{ opacity: 0 }}
     >
       <div className="bg-black">
-        <div className="flex justify-center">
-          <Circle width={visualViewport.width * 0.4 - 50}></Circle>
-        </div>
+        {blur1 || blur2 || blur3 ? (
+          <img
+            src={src1}
+            style={{
+              filter: blur1 ? "blur(20px)" : "none",
+              transition: blur1 ? "none" : "filter 0.3s ease-out",
+              width: visualViewport.height - 100,
+            }}
+            alt="About"
+          />
+        ) : (
+          <>
+            <div className="flex justify-center">
+              <Circle width={visualViewport.width * 0.4 - 50}></Circle>
+            </div>
 
-        <div className="flex justify-center pt-40">
-          <div style={{ position: "relative", display: "flex", width: "100%" }}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-end",
-                zIndex: "1",
-                width: "35%",
-                transform: "translateX(-5%)",
-              }}
-            >
-              <img
-                className="-ml-4 z-10"
-                src="images/about/Lady-1 1.png"
-                alt=""
-                style={{ width: "100%" }}
-              />
+            <div className="flex justify-center pt-40">
+              <div
+                style={{ position: "relative", display: "flex", width: "100%" }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                    zIndex: "1",
+                    width: "35%",
+                    transform: "translateX(-5%)",
+                  }}
+                >
+                  <img
+                    className="-ml-4 z-10"
+                    src={src1}
+                    alt=""
+                    style={{ width: "100%" }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                    zIndex: "2",
+                    width: "25%",
+                    transform: "translateX(5%)",
+                  }}
+                >
+                  <img
+                    className="-ml-4 z-10"
+                    src={src2}
+                    alt=""
+                    style={{
+                      width: "95%",
+                      transform: "scale(2) translateY(-25%) translateX(6%)",
+                    }}
+                  />
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                    zIndex: "1",
+                    width: "40%",
+                    transform: "translateX(0%)",
+                  }}
+                >
+                  <img
+                    className="-ml-4 z-10"
+                    src={src3}
+                    alt=""
+                    style={{ width: "100%" }}
+                  />
+                </div>
+              </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-end",
-                zIndex: "2",
-                width: "25%",
-                transform: "translateX(5%)",
-              }}
-            >
-              <img
-                className="-ml-4 z-10"
-                src="images/about/image 1.png"
-                alt=""
-                style={{
-                  width: "95%",
-                  transform: "scale(2) translateY(-25%) translateX(6%)",
-                }}
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "flex-end",
-                zIndex: "1",
-                width: "40%",
-                transform: "translateX(0%)",
-              }}
-            >
-              <img
-                className="-ml-4 z-10"
-                src="images/about/dudde 1.png"
-                alt=""
-                style={{ width: "100%" }}
-              />
-            </div>
-          </div>
-        </div>
+          </>
+        )}
         <div className="mt-8 z-20">
           <article className="w-full px-20">
             <div className="pb-16">
