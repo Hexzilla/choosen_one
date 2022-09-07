@@ -1,24 +1,30 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import useProgressiveImg from "../hooks/useProgressiveImg";
 import Circle from "./Circle";
 
-function Home() {
-  const quotes = [
-    {
-      first: "WE ARE THE ONES WHO",
-      second: "REFUSED TO GIVE UP.",
-    },
-    {
-      first: "SECOND",
-      second: "QUOTE.",
-    },
-    {
-      first: "THIRD",
-      second: "QUOTE.",
-    },
-  ];
+const quotes = [
+  {
+    first: "WE ARE THE ONES WHO",
+    second: "REFUSED TO GIVE UP.",
+  },
+  {
+    first: "SECOND",
+    second: "QUOTE.",
+  },
+  {
+    first: "THIRD",
+    second: "QUOTE.",
+  },
+];
+
+const Home = () => {
+  const [src, { blur }] = useProgressiveImg(
+    "images/home/tiny.jpg",
+    "images/home/choosen-ones-home.png"
+  );
   const [currentQuote] = useState(quotes[0]);
-  setInterval(() => {}, 1000);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -27,16 +33,34 @@ function Home() {
     >
       <div className="justify-around absolute bottom-0 w-full flex">
         <div className="relative">
-          <Circle
-            width={Math.min(visualViewport.height, visualViewport.width) - 120}
-            height={Math.min(visualViewport.height, visualViewport.width) - 120}
-          ></Circle>
-          <img
-            className="z-10 relative"
-            src="images/home/choosen-ones-home.png"
-            width={visualViewport.height - 100}
-            alt=""
-          />
+          {blur ? (
+            <img
+              src={src}
+              style={{
+                filter: blur ? "blur(20px)" : "none",
+                transition: blur ? "none" : "filter 0.3s ease-out",
+                width: visualViewport.height - 100,
+              }}
+              alt="HOME"
+            />
+          ) : (
+            <>
+              <Circle
+                width={
+                  Math.min(visualViewport.height, visualViewport.width) - 120
+                }
+                height={
+                  Math.min(visualViewport.height, visualViewport.width) - 120
+                }
+              ></Circle>
+              <img
+                className="z-10 relative"
+                src={src}
+                width={visualViewport.height - 100}
+                alt=""
+              />
+            </>
+          )}
         </div>
       </div>
       <div className="md:text-5xl rotate-90 top-1/6 md:pt-4 absolute left-full text-red-600 origin-top-left w-1/2 right-panel">
@@ -90,6 +114,6 @@ function Home() {
       </svg>
     </motion.div>
   );
-}
+};
 
 export default Home;
