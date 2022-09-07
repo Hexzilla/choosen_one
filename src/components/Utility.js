@@ -81,7 +81,7 @@ function Utility() {
             benefit our community in a multifaceted way.
           </p>
         </div>
-        <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 md:gap-36 mt-8">
+        <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:gap-24 md:gap-20 mt-8">
           {utilityCards.map((card) => (
             <div className="relative flex-col flex w-full">
               <div className="border-stone-30 border-2 relative">
