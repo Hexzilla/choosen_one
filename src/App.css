@@ -1,0 +1,22 @@
+* {
+    /* outline: 1px solid red; */
+}
+
+.parent:hover .child {
+    width: 40px;
+}
+
+body {
+    height: 95vh
+}
+
+*:focus {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.right-panel {
+    width: 836px;
+}
