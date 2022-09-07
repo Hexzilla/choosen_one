@@ -29,7 +29,7 @@ function About() {
             style={{
               filter: blur1 ? "blur(20px)" : "none",
               transition: blur1 ? "none" : "filter 0.3s ease-out",
-              width: visualViewport.height - 100,
+              width: "100vw",
             }}
             alt="About"
           />
