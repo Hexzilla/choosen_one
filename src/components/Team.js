@@ -105,7 +105,7 @@ const TeamCard = ({ card }) => {
   return (
     <div className="relative flex-col flex w-full">
       <div className="border-stone-30 border-2 relative">
-        <div style={{ minHeight: "500px" }}>
+        <div style={{ minHeight: "658px" }}>
           <img
             src={src}
             className="w-full"
