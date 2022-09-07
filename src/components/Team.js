@@ -4,7 +4,7 @@ import useProgressiveImg from "../hooks/useProgressiveImg";
 
 const utilityCards = [
   {
-    imgSrc: "images/team/mem3.png",
+    imgSrc: "images/team/mem3.jpg",
     title: "MICHAEL PIERI",
     subtitle: "FOUNDER & CEO",
     detailTable: [
@@ -15,7 +15,7 @@ const utilityCards = [
   },
 
   {
-    imgSrc: "images/team/mem2.png",
+    imgSrc: "images/team/mem2.jpg",
     title: "ISAAC WIESENTHAL",
     subtitle: "CHIEF MARKETING OFFICER",
     detailTable: [
@@ -25,7 +25,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem1.png",
+    imgSrc: "images/team/mem1.jpg",
     title: "MICHAEL PIERI",
     subtitle: "HEAD OF MARKETING",
     detailTable: [
@@ -35,7 +35,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem4.png",
+    imgSrc: "images/team/mem4.jpg",
     title: "MANON",
     subtitle: "LEAD ARTIST",
     detailTable: [
@@ -45,7 +45,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem5.png",
+    imgSrc: "images/team/mem5.jpg",
     title: "ANIS AMRANE",
     subtitle: "LEAD ARTIST",
     detailTable: [
@@ -55,7 +55,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem5.png",
+    imgSrc: "images/team/mem5.jpg",
     title: "ANIS AMRANE",
     subtitle: "LEAD ARTIST",
     detailTable: [
@@ -65,7 +65,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem3.png",
+    imgSrc: "images/team/mem3.jpg",
     title: "MICHAEL PIERI",
     subtitle: "FOUNDER & CEO",
     detailTable: [
@@ -75,7 +75,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem3.png",
+    imgSrc: "images/team/mem3.jpg",
     title: "MICHAEL PIERI",
     subtitle: "FOUNDER & CEO",
     detailTable: [
@@ -85,7 +85,7 @@ const utilityCards = [
     ],
   },
   {
-    imgSrc: "images/team/mem3.png",
+    imgSrc: "images/team/mem3.jpg",
     title: "MICHAEL PIERI",
     subtitle: "FOUNDER & CEO",
     detailTable: [
