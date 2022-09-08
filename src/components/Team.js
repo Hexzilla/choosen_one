@@ -97,10 +97,7 @@ const utilityCards = [
 ];
 
 const TeamCard = ({ card }) => {
-  const [src, blur] = useProgressiveImg(
-    "images/team/tiny.jpg",
-    card.imgSrc
-  );
+  const [src, blur] = useProgressiveImg("images/team/tiny.jpg", card.imgSrc);
 
   return (
     <div className="relative flex-col flex w-full">
@@ -144,15 +141,10 @@ const Team = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div
-        className=" md:flex md:flex-col w-5/6 mx-auto md:mt-10"
-        style={{ paddingBottom: "70px" }}
-      >
+      <div className="md:flex md:flex-col w-5/6 mx-auto md:mt-10 pb-24">
         <div className="flex flex-col">
           <h1 className="title">TEAM</h1>
-          <p className="text pt-6 pb-6">
-            A big old spiel about our utility.
-          </p>
+          <p className="text pt-6 pb-6">A big old spiel about our utility.</p>
         </div>
         <div class="grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 xl:gap-24 md:gap-20 mt-8">
           {utilityCards.map((card) => (

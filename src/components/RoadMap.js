@@ -1,9 +1,12 @@
 import "./RoadMap.css";
 import { motion } from "framer-motion";
 
-const roadMapCards = [
+const roadMapCards1 = [
   {
     cardNumber: "01",
+    cardTitle: "Public Announcement",
+    cardSubtitle: "The Chosen Ones go live on all socials",
+    cardImage: "images/roadmap/card-1.png",
     phaseString: "PHASE 1",
     title: "Digital currency",
     subtitle: "From Discord to the MetaVerse",
@@ -23,6 +26,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "02",
+    cardTitle: "Launching the Collection",
+    cardSubtitle: "The Launch 8,888 Chosen Ones Rewards for community",
+    cardImage: "images/roadmap/card-2.png",
     phaseString: "PHASE 2",
     title: "Launchine the collection",
     subtitle: "8,888 Chosen Ones are Released into the MetaVerse",
@@ -34,6 +40,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "03",
+    cardTitle: "Digital ATM Card",
+    cardSubtitle: "Stake, Earn, Get Rewarded Marketing + Collaboration",
+    cardImage: "images/roadmap/card-3.png",
     phaseString: "PHASE 3",
     title: "Digital ATM Card",
     subtitle: "Stake, Earn, Get Rewarded ",
@@ -46,6 +55,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "04",
+    cardTitle: "End of Year Event + Create to Earn Accelerator Program",
+    cardSubtitle: "The True Value of Chosen Ones",
+    cardImage: "images/roadmap/card-4.png",
     phaseString: "PHASE 4",
     title: "End of Year Event + Create to Earn Accelerator Program",
     subtitle: "The True Value of Chosen Ones ",
@@ -57,8 +69,14 @@ const roadMapCards = [
     ],
     imgsrc: "images/roadmap/roamap-1.png",
   },
+];
+
+const roadMapCards2 = [
   {
     cardNumber: "05",
+    cardTitle: "Public Announcement",
+    cardSubtitle: "The Chosen Ones go live on all socials",
+    cardImage: "images/roadmap/card-1.png",
     phaseString: "PHASE 5",
     title: "Accelerator Part 2",
     subtitle: "Launch of DAO Accelerator for Holders ",
@@ -71,6 +89,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "06",
+    cardTitle: "Public Announcement",
+    cardSubtitle: "The Chosen Ones go live on all socials",
+    cardImage: "images/roadmap/card-1.png",
     phaseString: "PHASE 6",
     title: "Cascade",
     subtitle: "The True Value of Chosen Ones ",
@@ -84,6 +105,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "07",
+    cardTitle: "Public Announcement",
+    cardSubtitle: "The Chosen Ones go live on all socials",
+    cardImage: "images/roadmap/card-1.png",
     phaseString: "PHASE 7",
     title: "Digital ATM Card",
     subtitle: "Stake, Earn, Get Rewarded ",
@@ -96,6 +120,9 @@ const roadMapCards = [
   },
   {
     cardNumber: "08",
+    cardTitle: "Public Announcement",
+    cardSubtitle: "The Chosen Ones go live on all socials",
+    cardImage: "images/roadmap/card-1.png",
     phaseString: "PHASE 8",
     title: "Digital ATM Card",
     subtitle: "Stake, Earn, Get Rewarded ",
@@ -115,12 +142,12 @@ function RoadMap() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="main_container">
+      <div className="md:flex md:flex-col w-5/6 mx-auto md:mt-10 pb-24">
         <div>
           <h1 className="title">ROADMAP</h1>
         </div>
         <div className="sub_container">
-          {roadMapCards.map((card, index) => (
+          {/* {roadMapCards1.map((card, index) => (
             <div className={`sub_items`}>
               <div className={`sub_item `}>
                 <div className="sub_half">
@@ -139,7 +166,25 @@ function RoadMap() {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
+          <div class="grid md:grid-cols-2 sm:grid-cols-1 md:gap-4 py-12 px-48">
+            {roadMapCards1.map((card, index) => (
+              <div className="roadmap-card grid grid-cols-2">
+                <div className="p-4">
+                  <h1 className="roadmap-card-number">{card.cardNumber}</h1>
+                  <article className="mt-8">
+                    <h2 className="roadmap-card-title">{card.cardTitle}</h2>
+                    <h2 className="roadmap-card-subtitle">
+                      {card.cardSubtitle}
+                    </h2>
+                  </article>
+                </div>
+                <div className="sub_half">
+                  <img src={card.cardImage} alt="Roadmap" className="w-full" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
