@@ -1,4 +1,5 @@
 import React from "react";
+import "./Utility.css";
 import { motion } from "framer-motion";
 import useProgressiveImg from "../hooks/useProgressiveImg";
 
@@ -120,8 +121,8 @@ const Utility = () => {
         style={{ paddingBottom: "100px" }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl md:text-7xl">UTILITY</h1>
-          <p className="md:text-2xl pt-6 pb-6">
+          <h1 className="title">UTILITY</h1>
+          <p className="text pt-6 pb-6">
             We took the time to curate a specific set of utility items to
             benefit our community in a multifaceted way.
           </p>

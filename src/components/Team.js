@@ -149,8 +149,8 @@ const Team = () => {
         style={{ paddingBottom: "70px" }}
       >
         <div className="flex flex-col">
-          <h1 className="text-5xl md:text-7xl">TEAM</h1>
-          <p className="md:text-2xl pt-6 pb-6">
+          <h1 className="title">TEAM</h1>
+          <p className="text pt-6 pb-6">
             A big old spiel about our utility.
           </p>
         </div>
