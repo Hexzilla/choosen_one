@@ -197,7 +197,7 @@ const RoadMapScene = ({ cards }) => {
               className="roadmap-card border border-black grid grid-cols-2 cursor-pointer"
               onClick={() => openCardDetail(card)}
             >
-              <div className="p-4 card-detail-bg">
+              <div className="p-4">
                 <h1 className="roadmap-card-number">{card.cardNumber}</h1>
                 <article className="mt-8">
                   <h2 className="roadmap-card-title">{card.cardTitle}</h2>
