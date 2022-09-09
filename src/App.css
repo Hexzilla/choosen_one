@@ -37,4 +37,8 @@ body {
     line-height: 32px;
     letter-spacing: 0.055em;
     text-align: left;
-  }
+}
+
+.card-detail-bg {
+    background-color: #8D99AE;
+}

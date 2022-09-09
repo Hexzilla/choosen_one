@@ -132,7 +132,7 @@ const roadMapCards2 = [
   },
 ];
 
-const RoadMapItem = ({ card, onClose }) => {
+const RoadMapDetail = ({ card, onClose }) => {
   return (
     <div className="flex justify-center items-center fixed inset-0 z-50 outline-none focus:outline-none bg-black">
       <div className="relative">
@@ -194,10 +194,10 @@ const RoadMapScene = ({ cards }) => {
         <div className="grid grid-flow-col grid-cols-1 md:grid-cols-2 md:grid-rows-2 md:gap-4 py-12 px-72">
           {cards.map((card, index) => (
             <div
-              className="roadmap-card border border-black grid grid-cols-2"
+              className="roadmap-card border border-black grid grid-cols-2 cursor-pointer"
               onClick={() => openCardDetail(card)}
             >
-              <div className="p-4">
+              <div className="p-4 card-detail-bg">
                 <h1 className="roadmap-card-number">{card.cardNumber}</h1>
                 <article className="mt-8">
                   <h2 className="roadmap-card-title">{card.cardTitle}</h2>
@@ -216,7 +216,7 @@ const RoadMapScene = ({ cards }) => {
         </div>
       </div>
       {!!card && (
-        <RoadMapItem card={card} onClose={() => setCard(null)}></RoadMapItem>
+        <RoadMapDetail card={card} onClose={() => setCard(null)}></RoadMapDetail>
       )}
     </div>
   );
