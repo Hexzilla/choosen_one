@@ -64,7 +64,7 @@ const Home = () => {
         </div>
       </div>
       <div className="md:text-5xl rotate-90 top-1/6 md:pt-4 absolute left-full text-red-600 origin-top-left w-1/2 right-panel">
-        <p>{currentQuote.first} </p> <div className="md:h-5"></div>
+        <p className="mb-5">{currentQuote.first} </p>
         <p className="font-bold">&nbsp;&nbsp;&nbsp; {currentQuote.second}</p>
       </div>
       <svg

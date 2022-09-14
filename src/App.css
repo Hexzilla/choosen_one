@@ -18,7 +18,7 @@ body {
 }
 
 .right-panel {
-    width: 836px;
+    width: max-content;
 }
 
 .title {
